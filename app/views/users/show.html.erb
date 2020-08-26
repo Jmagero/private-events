@@ -1,2 +1,7 @@
 <h1>User</h1>
 <%= @user.username%>
+<div>
+  <% @user.events.each do |e|%>
+    <%=e.name%>
+  <% end %>
+</div>
