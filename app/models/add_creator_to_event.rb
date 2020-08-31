@@ -1,0 +1,2 @@
+class AddCreatorToEvent < ApplicationRecord
+end
