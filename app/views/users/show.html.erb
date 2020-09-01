@@ -6,3 +6,10 @@
     <%= e.description %>
   <% end %>
 </div>
+
+<div>
+<h2>Events</h2>
+<% @user.attended_events.each do |e| %>
+    <%= e.description%><br>
+    <% end %>
+</div>
