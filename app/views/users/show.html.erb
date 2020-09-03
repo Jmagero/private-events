@@ -7,7 +7,7 @@
     <%= link_to e.name, event_path(e) %><br>
     <%= e.date %><br>
     <%= e.description %><br>
-    <div class="invite-btn"><%= link_to "Invite a friend" %></div><br>
+    <div class="invite-btn"><%= link_to "Invite a friend", new_event_manager_path %></div><br>
   <% end %>
 </div>
 

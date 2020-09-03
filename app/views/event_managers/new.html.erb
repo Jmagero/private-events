@@ -1,0 +1,23 @@
+<h1>Invite a Friend</h1>
+
+<h4>Pick from the list bellow the friend you would like to invite to this event</h4>
+
+<% @users.each do |friend| %>
+  <%= friend.username %>
+  <div>
+    <%= form_for @event_manager do |f| %>
+      <div>
+        <%= f.text_field :attendee_id %>
+      </div> 
+      <div>
+        <%= f.text_field :attended_event_id %>
+      </div>
+      <div>
+        <%= f.submit "Invite Friend" %>
+      </div>
+      
+    <% end %>
+  
+  </div>
+  <br><br>
+<% end %>
