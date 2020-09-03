@@ -14,6 +14,12 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
+    @pending_invitations = []
+
+    @user.attended_events.each do |invite|
+      confirmed = invite.confirmation
+      @pending_invitations << invite if confirmed == false
+    end
 
   end
 
