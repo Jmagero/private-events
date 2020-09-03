@@ -2,5 +2,13 @@
 <p>Event created by <%= @event.creator.username %></p>
 <h2>Attendees</h2>
 <% @event.attendees.each do |e| %>
-    <%= e.username%><br>
-    <% end %>
+    <%= link_to e.username, user_path(e) %><br>
+<% end %>
+
+<br><br>
+<%= link_to "Invite a friend",  %>
+
+<div>
+    <br><br>
+    <%= link_to "Back << ", root_path %>
+</div>

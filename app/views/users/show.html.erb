@@ -1,26 +1,24 @@
 <h1>User</h1>
 <%= @user.username%>
-<div>
-  <% @user.events.each do |e|%>
-    <%= e.name %><br>
-    <%= e.description %>
-  <% end %>
-</div>
 
 <div>
   <h4>Upcoming events </h4>
   <% @user.attended_events.where("date >= ?", DateTime.now).each do |e|%>
-    <%= e.name %> <br>
-    <%= e.date %>
-    <%= e.description %>
+    <%= link_to e.name, event_path(e) %><br>
+    <%= e.date %><br>
+    <%= e.description %><br>
+    <div class="invite-btn"><%= link_to "Invite a friend" %></div><br>
   <% end %>
 </div>
 
 <div>
   <h4>Previous events </h4>
   <% @user.attended_events.where("date <= ?", DateTime.now).each do |e|%>
-    <%= e.name %> <br>
-    <%= e.date %>
-    <%= e.description %>
+    <%= link_to e.name, event_path(e) %><br>
+    <%= e.date %><br>
+    <%= e.description %><br><br>
   <% end %>
 </div>
+
+<%= link_to "Back <<", root_path %>
+
