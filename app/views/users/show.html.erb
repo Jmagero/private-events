@@ -22,3 +22,14 @@
 
 <%= link_to "Back <<", root_path %>
 
+<ul>
+<strong>Pending Invitations:</strong>
+<% @unconfirmed_invitations.each do |e| %>
+  <li>
+    <p>Invitation ID: <%= link_to e.id, event_path(e) %></p>
+    <p><%#= e.event_date %></p>
+    <p><%= link_to "Accept Invitation", invitation_path(e) %></p>
+  </li>
+  <% end %>
+</ul>
+

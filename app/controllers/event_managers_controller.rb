@@ -2,6 +2,7 @@ class EventManagersController < ApplicationController
   def new
     @event_manager = EventManager.new
     @users = User.all
+    @user = current_user
   end
 
   def create

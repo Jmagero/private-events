@@ -2,25 +2,9 @@
 
 <h4>Pick from the list bellow the friend you would like to invite to this event</h4>
 
-<%= link_to "Better Invitation" %><br><br>
-
-<% @users.each do |friend| %>
-  <%= friend.username %>
-  <div>
-    <%= form_for @event_manager do |f| %>
-      <div>
-        <%= f.text_field :attendee_id %>
-      </div> 
-      <div>
-        <%= f.text_field :attended_event_id %>
-      </div>
-      <div>
-        <%= f.submit "Invite Friend" %>
-      </div>
-      
-    <% end %>
-  
-  </div>
-  <br><br>
+<%= form_for :event_manager, url:event_managers_path do |f|%>
+  <%= f.select :attended_event_id, Event.all.collect { |e| [ e.description, e.id ]}.select(&:present?), {:prompt => 'Select event'} %>
+  <%= f.select :attendee_id, User.all.collect { |u| [ u.username, u.id ] if u.id != @user }.select(&:present?), {:prompt => 'Select invitee'} %>
+  <%= f.submit "Invite User" %>
 <% end %>
 
