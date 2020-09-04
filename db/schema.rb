@@ -17,7 +17,7 @@ ActiveRecord::Schema.define(version: 2020_09_03_220336) do
     t.integer "attended_event_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "confirmation", default: 0, null: false
+    t.integer "confirmation"
     t.index ["attended_event_id"], name: "index_event_managers_on_attended_event_id"
     t.index ["attendee_id"], name: "index_event_managers_on_attendee_id"
   end

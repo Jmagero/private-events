@@ -20,6 +20,24 @@ class EventsController < ApplicationController
 
   def show
     @event = Event.find(params[:id])
+    @user = User.all
+    @event_managers = EventManager.all
+
+    @invited = []
+    @attendants = []
+
+    @event.event_managers.each do |invited|
+      confirmed = invited.confirmation
+      @invited << invited if confirmed == true 
+    end
+
+    @users.each do |u|
+      @invited.each do |ca|
+        @attendants << u.name if u.id == ca
+      end
+    end
+
+  
   end
 
 end
