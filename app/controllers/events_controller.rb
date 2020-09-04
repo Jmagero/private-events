@@ -20,7 +20,7 @@ class EventsController < ApplicationController
 
   def show
     @event = Event.find(params[:id])
-    @user = User.all
+    @users = User.all
     @event_managers = EventManager.all
 
     @invited = []
@@ -28,12 +28,12 @@ class EventsController < ApplicationController
 
     @event.event_managers.each do |invited|
       confirmed = invited.confirmation
-      @invited << invited if confirmed == true 
+      @invited << invited if confirmed == true or confirmed == 1
     end
 
     @users.each do |u|
-      @invited.each do |ca|
-        @attendants << u.name if u.id == ca
+      @invited.each do |invited|
+        @attendants << u.username if u.id == invited.attendee_id
       end
     end
 
