@@ -19,4 +19,13 @@ class EventManagersController < ApplicationController
     params.require(:event_manager).permit(:attendee_id, :attended_event_id)
   end
 
+  def update
+    @event_manager = EventManager.find(params[:id])
+
+    @event_manager.update_attribute(:confirmation, params[:confirmation] = true)
+    @event = @event_manager.attended_event_id
+
+    redirect_to event_path(@event)
+  end
+
 end
