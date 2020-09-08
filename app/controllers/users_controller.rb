@@ -7,9 +7,12 @@ class UsersController < ApplicationController
 
   def create
     @user = User.new(user_params)
-    @user.save
-
+    if @user.save
     redirect_to user_path(@user)
+    else
+      flash.alert = "fields cannot be blank!"
+      render 'new'
+    end
   end
 
   def show
