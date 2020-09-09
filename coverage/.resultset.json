@@ -274,44 +274,6 @@
           null
         ]
       },
-      "/home/guirecordon/Microverse/rails/private-events/app/models/event.rb": {
-        "lines": [
-          1,
-          1,
-          1,
-          1,
-          null,
-          1,
-          null,
-          1,
-          null,
-          null
-        ]
-      },
-      "/home/guirecordon/Microverse/rails/private-events/app/models/application_record.rb": {
-        "lines": [
-          1,
-          1,
-          null
-        ]
-      },
-      "/home/guirecordon/Microverse/rails/private-events/spec/features/user_spec.rb": {
-        "lines": [
-          1,
-          null,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          null,
-          null,
-          null
-        ]
-      },
       "/home/guirecordon/Microverse/rails/private-events/app/models/user.rb": {
         "lines": [
           1,
@@ -324,129 +286,10 @@
           null
         ]
       },
-      "/home/guirecordon/Microverse/rails/private-events/spec/models/event_spec.rb": {
-        "lines": [
-          1,
-          null,
-          1,
-          1,
-          1,
-          1,
-          1,
-          null,
-          null,
-          null,
-          1,
-          1,
-          1,
-          1,
-          null,
-          null,
-          null,
-          1,
-          1,
-          1,
-          1,
-          null,
-          null,
-          null,
-          null
-        ]
-      },
-      "/home/guirecordon/Microverse/rails/private-events/spec/models/user_spec.rb": {
-        "lines": [
-          1,
-          null,
-          1,
-          1,
-          1,
-          1,
-          1,
-          null,
-          null,
-          null,
-          1,
-          1,
-          1,
-          1,
-          null,
-          null,
-          null,
-          1,
-          1,
-          1,
-          1,
-          null,
-          null,
-          null,
-          1,
-          2,
-          1,
-          1,
-          null,
-          null,
-          null,
-          null
-        ]
-      },
-      "/home/guirecordon/Microverse/rails/private-events/app/controllers/events_controller.rb": {
+      "/home/guirecordon/Microverse/rails/private-events/app/models/application_record.rb": {
         "lines": [
           1,
           1,
-          null,
-          1,
-          0,
-          null,
-          null,
-          1,
-          1,
-          null,
-          null,
-          1,
-          0,
-          0,
-          0,
-          null,
-          0,
-          null,
-          null,
-          null,
-          1,
-          0,
-          0,
-          0,
-          null,
-          0,
-          0,
-          null,
-          0,
-          0,
-          0,
-          null,
-          null,
-          0,
-          0,
-          0,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null
-        ]
-      },
-      "/home/guirecordon/Microverse/rails/private-events/app/controllers/application_controller.rb": {
-        "lines": [
-          1,
-          null,
-          1,
-          1,
-          3,
-          null,
-          null,
-          1,
-          null,
           null
         ]
       },
@@ -485,6 +328,20 @@
           null
         ]
       },
+      "/home/guirecordon/Microverse/rails/private-events/app/controllers/application_controller.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          4,
+          null,
+          null,
+          1,
+          null,
+          null
+        ]
+      },
       "/home/guirecordon/Microverse/rails/private-events/app/models/event_manager.rb": {
         "lines": [
           1,
@@ -492,8 +349,45 @@
           1,
           null
         ]
+      },
+      "/home/guirecordon/Microverse/rails/private-events/app/models/event.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          1,
+          null,
+          1,
+          null,
+          1,
+          null,
+          null
+        ]
+      },
+      "/home/guirecordon/Microverse/rails/private-events/app/controllers/sessions_controller.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          1,
+          0,
+          0,
+          null,
+          1,
+          1,
+          null,
+          null,
+          null,
+          1,
+          0,
+          null,
+          0,
+          null,
+          null
+        ]
       }
     },
-    "timestamp": 1599594705
+    "timestamp": 1599667353
   }
 }
