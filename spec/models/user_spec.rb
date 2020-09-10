@@ -23,7 +23,7 @@ RSpec.describe User, :type => :model do
     end
 
     context 'validations' do
-      let(:user) { build(:user) }
+      let(:user) { User.create(:username => "Billy Jean", :email => "billy@jean.com") }
       it 'is valid with valid attributes ' do
         expect(user).to be_valid
       end
