@@ -3,16 +3,15 @@ class EventManagersController < ApplicationController
     @event_manager = EventManager.new
     @users = User.all
     @user = current_user
-
   end
 
   def create
     @event_manager = EventManager.new(event_manager_params)
-    
+
     if @event_manager.save
-        redirect_to root_path, notice: "You sent the invitation!"
+      redirect_to root_path, notice: 'You sent the invitation!'
     else
-        redirect_to root_path, notice: "An error happened and you can't send the invitation."
+      redirect_to root_path, notice: "An error happened and you can't send the invitation."
     end
   end
 
@@ -28,5 +27,4 @@ class EventManagersController < ApplicationController
 
     redirect_to event_path(@event)
   end
-
 end

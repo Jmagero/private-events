@@ -32,3 +32,4 @@
 
 #Ignore Coverage gem files
 /coverage
+node_modules/

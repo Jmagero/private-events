@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
   include UsersHelper
-  
+
   def new
     @user = User.new
   end
@@ -8,9 +8,9 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_params)
     if @user.save
-    redirect_to user_path(@user)
+      redirect_to user_path(@user)
     else
-      flash.alert = "fields cannot be blank!"
+      flash.alert = 'fields cannot be blank!'
       render 'new'
     end
   end
@@ -23,9 +23,5 @@ class UsersController < ApplicationController
       confirmed = invite.confirmation
       @pending_invitations << invite if confirmed == false || confirmed.nil?
     end
-
-    
-
   end
-
 end

@@ -28,7 +28,7 @@ class EventsController < ApplicationController
 
     @event.event_managers.each do |invited|
       confirmed = invited.confirmation
-      @invited << invited if confirmed == true or confirmed == 1
+      @invited << invited if confirmed == true
     end
 
     @users.each do |u|
@@ -36,8 +36,5 @@ class EventsController < ApplicationController
         @attendants << u.username if u.id == invited.attendee_id
       end
     end
-
-  
   end
-
 end
