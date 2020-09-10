@@ -220,6 +220,7 @@ DEPENDENCIES
   chromedriver-helper
   coffee-rails (~> 4.2)
   database_cleaner
+  diff-lcs (~> 1.4, >= 1.4.4)
   duktape
   hirb
   jbuilder (~> 2.5)

@@ -40,6 +40,7 @@ group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   gem "database_cleaner"
   gem "rspec-rails"
+  gem 'diff-lcs', '~> 1.4', '>= 1.4.4'
 
 end
 
