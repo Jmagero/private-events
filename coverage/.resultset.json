@@ -318,7 +318,7 @@
           null,
           1,
           1,
-          4,
+          8,
           null,
           null,
           1,
@@ -386,8 +386,44 @@
           null,
           null
         ]
+      },
+      "/home/guirecordon/Microverse/rails/private-events/app/controllers/event_managers_controller.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null,
+          1,
+          0,
+          null,
+          0,
+          0,
+          null,
+          0,
+          null,
+          null,
+          null,
+          1,
+          0,
+          null,
+          null,
+          1,
+          0,
+          null,
+          0,
+          0,
+          null,
+          0,
+          null,
+          null,
+          null
+        ]
       }
     },
-    "timestamp": 1599683304
+    "timestamp": 1599694552
   }
 }
