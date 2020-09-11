@@ -31,5 +31,5 @@
 /config/master.key
 
 #Ignore Coverage gem files
-/coverage
-node_modules/
+/coverage/*
+node_modules
