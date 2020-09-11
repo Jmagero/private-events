@@ -28,8 +28,8 @@
 <strong>Pending Invitations:</strong>
 <% @pending_invitations.each do |e| %>
   <li>
-    <p>Invitation ID: <%= link_to e.id, event_path(e) %></p>
-    <p><%#= e.event_date %></p>
+    <p>Invitation ID: <%= link_to e.attended_event_id, event_path(e.attended_event_id) %></p>
+    <p><%#= e.name %></p>
     <p><%= link_to "Accept Invitation", event_manager_path(e) %></p>
   </li>
   <% end %>

@@ -26,14 +26,14 @@ class EventsController < ApplicationController
     @invited = []
     @attendants = []
 
-    @event.event_managers.each do |invited|
-      confirmed = invited.confirmation
-      @invited << invited if confirmed == true
+    @event.event_managers.each do |invite|
+      confirmed = invite.confirmation
+      @invited << invite if confirmed == 1
     end
 
     @users.each do |u|
       @invited.each do |invited|
-        @attendants << u.username if u.id == invited.attendee_id
+        @attendants << u if u.id == invited.attendee_id
       end
     end
   end
