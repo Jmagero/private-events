@@ -21,7 +21,7 @@ class UsersController < ApplicationController
 
     @user.event_managers.each do |invite|
       confirmed = invite.confirmation
-      @pending_invitations << invite if confirmed == false || confirmed.nil?
+      @pending_invitations << invite if confirmed == 0
     end
   end
 end

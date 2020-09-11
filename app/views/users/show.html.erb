@@ -26,6 +26,7 @@
 
 <ul>
 <strong>Pending Invitations:</strong>
+<%= @pending_invitations %>
 <% @pending_invitations.each do |e| %>
   <li>
     <p>Invitation ID: <%= link_to e.attended_event_id, event_path(e.attended_event_id) %></p>
