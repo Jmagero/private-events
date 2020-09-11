@@ -1,5 +1,5 @@
-<h1>User</h1>
-<%= @user.username%><br>
+<h1>User: <%= @user.username%><br></h1>
+
 
 <%= link_to "Create Event", new_event_path %>
 
@@ -22,17 +22,21 @@
   <% end %>
 </div>
 
-<%= link_to "Back <<", root_path %>
-
 <ul>
 <strong>Pending Invitations:</strong>
-<%= @pending_invitations %>
-<% @pending_invitations.each do |e| %>
-  <li>
-    <p>Invitation ID: <%= link_to e.attended_event_id, event_path(e.attended_event_id) %></p>
-    <p><%#= e.name %></p>
-    <p><%= link_to "Accept Invitation", event_manager_path(e) %></p>
-  </li>
-  <% end %>
+    <% if @pending_invitations.size == 0 %>
+      <p><em> You got no pending invitations </em> </p>
+    <% else %>
+      <% @pending_invitations.each do |e| %>
+        <li>
+          <p>Invitation ID: <%= link_to e.attended_event_id, event_path(e.attended_event_id) %></p>
+          <p><%#= e.name %></p>
+          <p><%= link_to "Accept Invitation", event_manager_path(e) %></p>
+        </li>
+      <% end %> 
+    <% end %>
 </ul>
+
+
+<%= link_to "<< Home", root_path %>
 

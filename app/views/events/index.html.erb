@@ -7,11 +7,11 @@
 
 <div>
   <h4>Upcoming events </h4>
-  <% @events.upcoming.each do |e|%>
-    <%= link_to e.name, event_path(e) %> <br>
-    <%= e.date %> <br>
-    <%= e.description %><br><br>
-  <% end %>
+      <% @events.upcoming.each do |e|%>
+        <%= link_to e.name, event_path(e) %> <br>
+        <%= e.date %> <br>
+        <%= e.description %><br><br>
+      <% end %>
 </div>
 
 <div>
