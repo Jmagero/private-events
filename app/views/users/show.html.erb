@@ -6,11 +6,13 @@
 <h4> Events created by <%=@user.username%> </h4>
 <% @user.events.each do |e|%><br>
   <%= e.name%>
+  <%= e.date%>
+
 <%end%>
 
 <div>
   <h4>Upcoming events </h4>
-  <% @user.attended_events.where("date >= ?", DateTime.now).each do |e|%>
+  <% @upcoming_events.each do |e|%>
     <%= link_to e.name, event_path(e) %><br>
     <%= e.date %><br>
     <%= e.description %><br>
@@ -20,7 +22,7 @@
 
 <div>
   <h4>Previous events </h4>
-  <% @user.attended_events.where("date <= ?", DateTime.now).each do |e|%>
+  <% @previous_events.each do |e|%>
     <%= link_to e.name, event_path(e) %><br>
     <%= e.date %><br>
     <%= e.description %><br><br>
