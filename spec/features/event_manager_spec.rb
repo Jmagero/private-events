@@ -19,13 +19,13 @@ RSpec.describe EventManager, type: :feature do
       visit '/events/new'
       fill_in 'Name', with: 'Great Event'
       fill_in 'Description', with: 'Description of a great event.'
-      fill_in 'Date', with: 9-12-2020
+      fill_in 'Date', with: 9 - 12 - 2020
       click_button 'Create Event'
       expect(page).to have_content 'Great Event'
       click_link 'Invite'
       visit new_event_manager_path
       expect(page).to have_text('Invite a Friend')
-      find('#event_manager_attended_event_id').find(:xpath, 'option[1]').select_option         
+      find('#event_manager_attended_event_id').find(:xpath, 'option[1]').select_option
       find('#event_manager_attendee_id').find(:xpath, 'option[1]').select_option
       click_button 'Invite User'
       expect(page).to have_content 'Upcoming events'

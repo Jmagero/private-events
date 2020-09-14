@@ -18,12 +18,12 @@ class UsersController < ApplicationController
   def show
     @user = User.find(params[:id])
     @pending_invitations = []
-    @upcoming_events = current_user.attended_events.where("date >= ?", DateTime.now)
-    @previous_events = current_user.attended_events.where("date <= ?", DateTime.now)
+    @upcoming_events = current_user.attended_events.where('date >= ?', DateTime.now)
+    @previous_events = current_user.attended_events.where('date <= ?', DateTime.now)
 
     @user.event_managers.each do |invite|
       confirmed = invite.confirmation
-      @pending_invitations << invite if confirmed == 0
+      @pending_invitations << invite if confirmed.zero?
     end
   end
 end
