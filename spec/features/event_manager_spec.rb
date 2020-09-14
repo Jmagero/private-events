@@ -28,9 +28,7 @@ RSpec.describe EventManager, type: :feature do
       find('#event_manager_attended_event_id').find(:xpath, 'option[1]').select_option         
       find('#event_manager_attendee_id').find(:xpath, 'option[1]').select_option
       click_button 'Invite User'
-      get root_path
-      assert_response :flash
-      expect(page).to have_text('You sent the invitation!')
+      expect(page).to have_content 'Upcoming events'
     end
   end
 end
