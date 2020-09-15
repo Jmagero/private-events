@@ -5,10 +5,10 @@ module ApplicationHelper
 
   def user_log_in
     if current_user
-      link_to current_user.username, user_path(current_user)
+      concat link_to current_user.username, user_path(current_user)
       link_to 'Log Out', session_path(current_user), method: :delete
     else
-      link_to 'Sign up', new_user_path or
+      concat link_to 'Sign up', new_user_path
       link_to 'Log In', new_session_path
     end
   end
