@@ -22,7 +22,7 @@ class EventsController < ApplicationController
     @event = Event.find(params[:id])
     @users = User.all
     @event_managers = EventManager.all
-
+  
     @invited = []
     @attendants = []
 

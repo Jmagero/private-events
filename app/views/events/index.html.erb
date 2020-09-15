@@ -1,9 +1,5 @@
 <h1> Events</h1>
-
-<% if current_user %>
-  <%= link_to "Create New Event", new_event_path %>
-<% end %> 
-
+<%= render'create_event'%>
 
 <div>
   <h4>Upcoming events </h4>
