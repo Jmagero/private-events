@@ -1,7 +1,8 @@
 <h1><%= @event.name %></h1>
 <p>Event created by <%= link_to @event.creator.username, user_path(@event.creator) %></p>
+
 <h2>Invited Guests</h2>
-   <%= render 'invited'%>
+<%= invited %>
 
 <br><br>
 <%= link_to "Invite", new_event_manager_path  %>
