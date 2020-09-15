@@ -12,5 +12,4 @@ module ApplicationHelper
       link_to ' Log In', new_session_path
     end
   end
-
 end

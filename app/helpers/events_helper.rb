@@ -4,9 +4,7 @@ module EventsHelper
   end
 
   def create_event
-    if current_user
-      link_to "Create New Event", new_event_path
-    end 
+    link_to 'Create New Event', new_event_path if current_user
   end
 
   def invited
