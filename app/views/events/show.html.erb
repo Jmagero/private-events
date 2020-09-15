@@ -1,11 +1,11 @@
 <h1><%= @event.name %></h1>
-<p>Event created by <%= @event.creator.username %></p>
+<p>Event created by <%= link_to @event.creator.username, user_path(@event.creator) %></p>
 <h2>Invited Guests</h2>
     <% if @attendants.size == 0 %>
         <p><em>No guests have been invited to this event so far.</em></p>
     <% else %>
         <% @attendants.each do |e| %>
-        <%= e.username %><br>
+        <%= link_to e.username, user_path(e) %><br>
     <% end %>
 <% end %>
 
