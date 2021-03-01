@@ -1,0 +1,7 @@
+<% if @attendants.size.zero?%>
+    <p><em>No guests have been invited to this event so far.</em></p>
+<% else %>
+    <% @attendants.each do |e| %>
+        <%= link_to e.username, user_path(e) %><br>
+    <% end %>
+<% end %>

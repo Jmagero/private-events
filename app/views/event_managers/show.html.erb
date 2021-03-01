@@ -1,0 +1,6 @@
+<h1>Attendance Confirmation</h1>
+
+<%= form_for(:event_managers, url: event_manager_path, method: :patch) do |f| %>
+  <%= f.hidden_field :confirmation %>
+  <%= f.submit "Confirm Attendance" %>
+<% end %>

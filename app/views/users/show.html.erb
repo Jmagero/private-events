@@ -1,0 +1,38 @@
+<h1>User: <%= @user.username%><br></h1>
+
+<%= link_to "Create Event", new_event_path %>
+
+<h4> Events created by <%= @user.username%> </h4>
+<% @user.events.each do |e|%><br>
+  <%= link_to e.name, event_path(e) %>
+  <%= e.date %>
+
+<%end%>
+
+<div>
+  <h4>Upcoming events </h4>
+  <% @upcoming_events.each do |e|%>
+    <%= link_to e.name, event_path(e) %><br>
+    <%= e.date %><br>
+    <%= e.description %><br>
+    <div class="invite-btn"><%= link_to "Invite a friend", new_event_manager_path %></div><br>
+  <% end %>
+</div>
+
+<div>
+  <h4>Previous events </h4>
+  <% @previous_events.each do |e|%>
+    <%= link_to e.name, event_path(e) %><br>
+    <%= e.date %><br>
+    <%= e.description %><br><br>
+  <% end %>
+</div>
+
+<ul>
+<strong>Pending Invitations:</strong>
+    <%= render 'pending_invitations' %>
+</ul>
+
+
+<%= link_to "<< Home", root_path %>
+

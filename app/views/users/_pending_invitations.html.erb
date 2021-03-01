@@ -1,0 +1,11 @@
+    <% if @pending_invitations.size.zero? %>
+      <p><em> You got no pending invitations </em> </p>
+    <% else %>
+      <% @pending_invitations.each do |e| %>
+        <li>
+          <p>Invitation ID: <%= link_to e.attended_event_id, event_path(e.attended_event_id) %></p>
+          <p><%#= e.name %></p>
+          <p><%= link_to "Accept Invitation", event_manager_path(e) %></p>
+        </li>
+      <% end %> 
+    <% end %>

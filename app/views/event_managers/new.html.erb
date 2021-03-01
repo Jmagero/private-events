@@ -1,0 +1,10 @@
+<h1>Invite a Friend</h1>
+
+<h4>Pick from the list bellow the friend you would like to invite to this event</h4>
+
+<%= form_for :event_manager, url:event_managers_path do |f|%>
+  <%= f.select :attended_event_id, Event.all.collect { |e| [ e.name, e.id ]}.select(&:present?), {:prompt => 'Select event'} %>
+  <%= f.select :attendee_id, User.all.collect { |u| [ u.username, u.id ] if u.id != @user }.select(&:present?), {:prompt => 'Select invitee'} %>
+  <%= f.submit "Invite User" %>
+<% end %>
+
